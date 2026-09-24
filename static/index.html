@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1423">
+  <title>サーマルセンサー</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon" aria-hidden="true">◈</span><div><small>GEN8 / LIVE SENSOR</small><h1>サーマルセンサー</h1></div></div>
+      <div id="status" class="status offline"><span class="status-dot"></span><span id="status-text">接続中</span></div>
+    </header>
+
+    <section class="intro">
+      <div><p class="eyebrow">THERMAL VIEW / MLX90641</p><h2>温度を、ひと目で。</h2><p class="sub">センサーが捉えた16 × 12画素の温度分布をリアルタイムで表示します。</p></div>
+      <div class="updated"><span>最終更新</span><strong id="updated">—</strong></div>
+    </section>
+
+    <section class="dashboard" aria-label="温度ダッシュボード">
+      <div class="camera card">
+        <div class="card-heading"><div><span class="eyebrow">LIVE HEATMAP</span><h3>サーマル映像</h3></div><span class="resolution">16 × 12 px</span></div>
+        <div class="canvas-wrap"><canvas id="heatmap" width="320" height="240" role="img" aria-label="温度分布のヒートマップ"></canvas><div id="empty" class="empty">センサーからの映像を待っています…</div></div>
+        <div class="scale"><span id="scale-min">— °C</span><div class="scale-bar"></div><span id="scale-max">— °C</span></div>
+        <p class="hint">ヒートマップをタップすると、その位置の温度を表示します。</p>
+      </div>
+
+      <div class="readings">
+        <div class="reading card hot"><div class="reading-top"><span>最高温度</span><span class="reading-icon">↗</span></div><div class="reading-value"><strong id="maximum">—</strong><span>°C</span></div><p>画面内で最も熱い場所</p></div>
+        <div class="reading card cool"><div class="reading-top"><span>最低温度</span><span class="reading-icon">↘</span></div><div class="reading-value"><strong id="minimum">—</strong><span>°C</span></div><p>画面内で最も冷たい場所</p></div>
+        <div class="reading card average"><div class="reading-top"><span>平均温度</span><span class="reading-icon">≈</span></div><div class="reading-value"><strong id="average">—</strong><span>°C</span></div><p>192画素の平均</p></div>
+        <div class="reading card ambient"><div class="reading-top"><span>周囲温度</span><span class="reading-icon">◌</span></div><div class="reading-value"><strong id="ambient">—</strong><span>°C</span></div><p>センサー付近の気温</p></div>
+      </div>
+    </section>
+    <div class="detail"><span id="point">画面上の温度: —</span><span id="message">センサーに接続しています</span></div>
+    <footer>MELEXIS MLX90641 <span>·</span> GEN8 SERVER</footer>
+  </main>
+</body>
+</html>
