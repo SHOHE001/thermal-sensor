@@ -6,14 +6,14 @@
 
 ## 導入状況
 
-最終確認日: 2026-09-24
+最終確認日: 2026-09-25
 
 | 項目 | 状態 | 根拠・補足 |
 | --- | --- | --- |
 | 指示 | 設定済み | `AGENTS.md` |
-| CI | 設定済み | `.github/workflows/check.yml`。初回PRで実行結果を確認する |
+| CI | 設定済み | `.github/workflows/check.yml` の `syntax`。初回PRで成功を確認 |
 | Issue / PR templates | 設定済み | `.github/ISSUE_TEMPLATE/`、`.github/pull_request_template.md` |
-| branch保護 | 未確認 | 初回CI成功後にGitHub APIで確認・設定する |
+| branch保護 | 設定済み | `main` にPR・`syntax` 成功必須、adminにも適用、force push・削除を禁止。2026-09-25にGitHub APIでreadback |
 | Project | 設定済み | [Development HQ](https://github.com/users/SHOHE001/projects/1) を再利用 |
 
 ## ローカル検証
