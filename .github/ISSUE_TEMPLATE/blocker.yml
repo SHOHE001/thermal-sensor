@@ -1,0 +1,23 @@
+name: Blocker
+description: Record a repeated unresolved blocker
+title: "[Blocked] "
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal and impact
+    validations:
+      required: true
+  - type: textarea
+    id: attempts
+    attributes:
+      label: Attempts and results
+      description: Record each distinct hypothesis, action, and result.
+    validations:
+      required: true
+  - type: textarea
+    id: unblock
+    attributes:
+      label: What would unblock this?
+    validations:
+      required: true

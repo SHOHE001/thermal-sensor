@@ -1,0 +1,17 @@
+name: Feature
+description: Add or improve a capability
+title: "[Feature] "
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should users be able to do?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true

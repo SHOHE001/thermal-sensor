@@ -1,0 +1,4 @@
+mlx90641-driver-evb9064x==0.3.0
+mlx90641-driver==1.2.0
+pyserial==3.5
+setuptools==80.10.2
